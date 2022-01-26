@@ -1,0 +1,7 @@
+Original src vocab size: 18685
+Original trg vocab size: 10214
+
+   number of operations  src vocab size  trg vocab size  src vocab size (joint ops)  trg vocab size (joint ops)
+0                  1000            1112            1083                         995                         826
+1                  5000            4967            4785                        3899                        2981
+2                 15000           13312           10404                       10123                        6878

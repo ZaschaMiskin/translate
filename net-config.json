@@ -1,0 +1,1742 @@
+{
+  "proto-net-xs": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 32,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 32,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 128,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ]
+  },
+  "proto-net-s": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 64,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 64,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 256,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ]
+  },
+  "proto-net-m": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 1024,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_3",
+        "type": "dense",
+        "units": 1024,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_4",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_4",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_5",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "proto-net-l": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ]
+  },
+  "proto-net-xl": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 2048,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 2048,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ]
+  },
+  "proto-net-l-nobn": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "fully_connected_src_layer": [
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ]
+  },
+  "proto-net-m-nobn": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "fully_connected_src_layer": [
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.contrib.layers.variance_scaling_initializer(factor=1.0, mode='FAN_AVG', uniform=False)"
+      }
+    ]
+  },
+  "proto-net-alpha": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 12,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_src_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_2",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_trg_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_2",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 1024,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_3",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_4",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_4",
+        "type": "dense",
+        "units": 1024,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_5",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "proto-net-beta": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 1024,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ]
+  },
+  "proto-net-gamma": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "embedding_size": 8,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_src_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_2",
+        "type": "dense",
+        "units": 512,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_3",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ]
+  },
+  "ref-net-alpha": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "embedding_size": 2,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "fully_connected_src_layer": [
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ]
+  },
+  "ref-net-beta": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "embedding_size": 2,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "fully_connected_src_layer": [
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "softmax",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_2",
+        "type": "dense",
+        "units": 5,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "softmax",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_2",
+        "type": "dense",
+        "units": 5,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 1024,
+        "activation": "sigmoid",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ]
+  },
+  "ref-net-gamma-good": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "embedding_size": 2,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "projection_activation": "relu",
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 32,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-net-delta": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "embedding_size": 2,
+    "src_vocab_size": 5026,
+    "trg_vocab_size": 5026,
+    "projection_activation": "relu",
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-net-epsilon": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "embedding_size": 3,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "projection_activation": "relu",
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-net-zeta": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 3,
+      "src_matrix_init": "tf.initializers.random_normal(mean=4, stddev=4)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=4, stddev=4)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.random_normal"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "test-net-alpha": {
+    "architecture": "exercise-3",
+    "window_size": 3,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 2,
+      "src_matrix_init": "tf.initializers.random_normal(mean=4, stddev=4)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=4, stddev=4)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.random_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 5,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal(mean=2, stddev=2)"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "test-net-beta": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 16,
+      "src_matrix_init": "tf.initializers.random_normal(mean=4, stddev=4)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=4, stddev=4)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.random_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 64,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 32,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.random_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "test-net-gamma": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 16,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "test-net-delta": {
+    "architecture": "exercise-3",
+    "window_size": 2,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_src_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_2",
+        "type": "dense",
+        "units": 256,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_trg_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_2",
+        "type": "dense",
+        "units": 128,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_2",
+        "type": "dense",
+        "units": 512,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_3",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-renet-alpha": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 10,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ]
+  },
+  "ref-renet-beta": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 20,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 20,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 10,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ]
+  },
+  "ref-renet-gamma": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 700,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 600,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ]
+  },
+  "ref-renet-epsilon": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 600,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 800,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 200,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-renet-zeta": {
+    "architecture": "exercise-3",
+    "window_size": 1,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 900,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 900,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 400,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-renet-eta": {
+    "architecture": "exercise-3",
+    "window_size": 3,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "relu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 600,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 800,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 200,
+        "activation": "relu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "ref-renet-theta": {
+    "architecture": "exercise-3",
+    "window_size": 3,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 8,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "activation": "elu",
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 300,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "next-net-alpha": {
+    "architecture": "exercise-3",
+    "window_size": 3,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 300,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 100,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 300,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  },
+  "next-net-beta": {
+    "architecture": "exercise-3",
+    "window_size": 3,
+    "src_vocab_size": 3899,
+    "trg_vocab_size": 2981,
+    "embeddings": {
+      "embedding_size": 300,
+      "src_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)",
+      "trg_matrix_init": "tf.initializers.random_normal(mean=0, stddev=0.001)"
+    },
+    "projection_layer": {
+      "kernel_init": "tf.initializers.he_normal()"
+    },
+    "fully_connected_src_layer": [
+      {
+        "name": "bn_src_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_src_layer_1",
+        "type": "dense",
+        "units": 200,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_trg_layer": [
+      {
+        "name": "bn_trg_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_trg_layer_1",
+        "type": "dense",
+        "units": 200,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      }
+    ],
+    "fully_connected_layer": [
+      {
+        "name": "bn_layer_1",
+        "type": "batch_normalization"
+      },
+      {
+        "name": "fc_layer_1",
+        "type": "dense",
+        "units": 400,
+        "activation": "elu",
+        "kernel_init": "tf.initializers.he_normal()"
+      },
+      {
+        "name": "bn_layer_2",
+        "type": "batch_normalization"
+      }
+    ]
+  }
+}

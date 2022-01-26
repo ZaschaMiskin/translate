@@ -1,0 +1,6 @@
+                                                          checkpoint      BLEU  Beam_size
+  approved-models/next-net-beta/checkpoints/2019-05-30T12-27-58-4000  0.207498          5
+  approved-models/next-net-beta/checkpoints/2019-05-30T12-27-58-8000  0.206411          5
+ approved-models/next-net-beta/checkpoints/2019-05-30T12-27-58-12000  0.224044          5
+ approved-models/next-net-beta/checkpoints/2019-05-30T12-27-58-16000  0.250124          5
+ approved-models/next-net-beta/checkpoints/2019-05-30T12-27-58-17740  0.237862          5

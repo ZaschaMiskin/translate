@@ -1,0 +1,6 @@
+                                                            checkpoint      BLEU
+  ./approved-models/next-net-beta/checkpoints\2019-05-30T12-27-58-4000  0.187508
+  ./approved-models/next-net-beta/checkpoints\2019-05-30T12-27-58-8000  0.179161
+ ./approved-models/next-net-beta/checkpoints\2019-05-30T12-27-58-12000  0.207230
+ ./approved-models/next-net-beta/checkpoints\2019-05-30T12-27-58-16000  0.230183
+ ./approved-models/next-net-beta/checkpoints\2019-05-30T12-27-58-17740  0.223709
